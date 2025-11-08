@@ -7,3 +7,12 @@
 header > a:clicked{
   color:hotpink;
 }
+
+a:hover{
+  color:darkpurple;
+}
+.emailCard{
+  height:250px;
+  width:300px;
+  
+}

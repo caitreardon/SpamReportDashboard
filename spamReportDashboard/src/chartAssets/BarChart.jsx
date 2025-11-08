@@ -1,7 +1,8 @@
 import { ChartContainer } from '@mui/x-charts/ChartContainer';
 import { BarPlot } from '@mui/x-charts/BarChart';
+import { BarChart } from '@mui/x-charts/BarChart';
 
-const uData = [4000, 3000, 2000, 2780, 1890, 2390, 3490];
+const uData = [20, 15, 12, 17, 22, 18, 23];
 const xLabels = [
     'Page A',
     'Page B',
@@ -17,10 +18,24 @@ export default function SimpleBarChart() {
         <ChartContainer
             width={500}
             height={300}
-            series={[{ data: uData, label: 'uv', type: 'bar' }]}
+            series={[{ data: uData, label: 'Series 1', type: 'bar' }]}
             xAxis={[{ scaleType: 'band', data: xLabels }]}
         >
-            <BarPlot />
+            <BarChart 
+                xAxis={[
+                    {
+                        id: 'barCategories',
+                        data: xLabels,
+                    },
+                ]}
+                series={[
+                    {
+                        data: uData,
+                    },
+                ]}
+                height={300}
+                slotProps={{ tooltip: {trigger:'item'}}}/>
+            <BarPlot slotProps={{ tooltip: {trigger: 'item' } }}/>
         </ChartContainer>
     );
 }

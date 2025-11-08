@@ -25,9 +25,11 @@ export default function TinyLineChart() {
             series={[{ type: 'line', data: pData }]}
             xAxis={[{ scaleType: 'point', data: xLabels, position: 'none' }]}
             yAxis={[{ position: 'none' }]}
-            disableAxisListener
         >
-            <LinePlot />
+            <LinePlot slotProps={{
+                tooltip: {
+                    trigger: 'item',
+                } }}/>
             <MarkPlot />
         </ChartContainer>
     );
