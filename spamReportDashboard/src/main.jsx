@@ -6,6 +6,7 @@ import BarChart from './chartAssets/BarChart.jsx'
 import LineChart from './chartAssets/LineChart.jsx'
 import HalfPieChart from './chartAssets/HalfPieChart.jsx'
 import CommonWords from './CommonWords.jsx'
+import MapDisplay from './chartAssets/MapDisplay.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
@@ -13,5 +14,6 @@ createRoot(document.getElementById('root')).render(
     <BarChart />
     <LineChart />
     <HalfPieChart />
+    <MapDisplay />
   </StrictMode>,
 )
