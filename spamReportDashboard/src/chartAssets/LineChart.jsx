@@ -19,6 +19,8 @@ const xLabels = [
 
 export default function TinyLineChart() {
     return (
+        <div>
+            <h2>Time of Day</h2>
         <ChartContainer
             width={500}
             height={300}
@@ -32,5 +34,7 @@ export default function TinyLineChart() {
                 } }}/>
             <MarkPlot />
         </ChartContainer>
+        </div>
+        
     );
 }

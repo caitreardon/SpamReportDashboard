@@ -1,8 +1,8 @@
 import { ChartContainer } from '@mui/x-charts/ChartContainer';
 import { BarPlot } from '@mui/x-charts/BarChart';
 import { BarChart } from '@mui/x-charts/BarChart';
-
-const uData = [20, 15, 12, 17, 22, 18, 23];
+import Box from '@mui/material/Box';
+const uData = ['87', '150' , '90', '400', '220', '127', '234' , '109', '42'];
 const xLabels = [
     'Page A',
     'Page B',
@@ -15,28 +15,16 @@ const xLabels = [
 
 export default function SimpleBarChart() {
     return (
-        <ChartContainer
-            width={500}
-            height={300}
-            series={[{ data: uData, label: 'Series 1', type: 'bar' }]}
-            xAxis={[{ scaleType: 'band', data: xLabels }]}
-        >
-            <BarChart 
-                xAxis={[
-                    {
-                        id: 'barCategories',
-                        data: xLabels,
-                    },
+        <div>
+            <h2>Words to look out for</h2>
+            <box sx={{ width: '100%', height: 300 }}>
+                <BarChart series={[
+                    { data: uData, label: ' % frequency', id: 'wordFrequencyId' }
                 ]}
-                series={[
-                    {
-                        data: uData,
-                    },
-                ]}
-                height={300}
-                slotProps={{ tooltip: {trigger:'item'}}}
-                className="barStyle"/>
-            <BarPlot slotProps={{ tooltip: {trigger: 'item' } }}/>
-        </ChartContainer>
-    );
+                xAxis={[{ data:xLabels, label:'Most Common Words'}]}
+                />
+            </box>
+
+        </div>
+    )
 }
