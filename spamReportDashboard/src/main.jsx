@@ -9,7 +9,7 @@ import CommonWords from './CommonWords.jsx'
 import MapDisplay from './chartAssets/MapDisplay.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <App className="App"/>
     <CommonWords />
     <BarChart />
     <LineChart />

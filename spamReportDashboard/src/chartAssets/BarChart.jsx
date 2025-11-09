@@ -34,7 +34,8 @@ export default function SimpleBarChart() {
                     },
                 ]}
                 height={300}
-                slotProps={{ tooltip: {trigger:'item'}}}/>
+                slotProps={{ tooltip: {trigger:'item'}}}
+                className="barStyle"/>
             <BarPlot slotProps={{ tooltip: {trigger: 'item' } }}/>
         </ChartContainer>
     );
